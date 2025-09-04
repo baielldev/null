@@ -1,0 +1,78 @@
+.chat-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* затемнение */
+  backdrop-filter: blur(8px); /* блюр фона */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* чтобы было поверх всего */
+}
+
+.chat-container {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.close-btn {
+  position: fixed; /* фиксируем относительно экрана */
+  top: 20px; /* отступ сверху */
+  right: 20px; /* отступ справа */
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10001; /* выше модального окна */
+  color: #fff; /* видна на затемнении */
+}
+
+.chat-message {
+  display: flex;
+}
+
+.chat-right {
+  justify-content: flex-end;
+}
+.chat-left {
+  justify-content: flex-start;
+}
+
+.bubble {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 20px;
+  background-color: #ffe6f0;
+  font-family: "Marck Script", cursive;
+  position: relative;
+}
+
+.typing {
+  background-color: #f0f0f0;
+  color: transparent;
+  width: 20px;
+  animation: blink 1s infinite;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+}
