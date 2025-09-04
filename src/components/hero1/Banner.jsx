@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div className="main">
       <Image
-        src="/assets/section.png"
+        src="/assets/red-img.png"
         alt=""
         width={475}
         height={630}
