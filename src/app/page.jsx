@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <audio ref={audioRef} autoPlay loop muted>
-        <source src="/assets/nurick-music.mp3" type="audio/mpeg" />
+        <source src="/assets/music.mp3" type="audio/mpeg" />
         Ваш браузер не поддерживает аудио.
       </audio>
       {showMemory && (
